@@ -1,0 +1,134 @@
+$dark_gray: #2B2E2E;
+$light_gray: #C0C1C1;
+$green: #529ECC;
+
+@mixin bold_font {
+  font-family: 'Dosis', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	padding-top: 4.5rem;
+	font-family: 'Dosis', sans-serif;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrapper_with_padding {
+	width: 80%;
+	margin: 0 auto;
+	padding: 3.5rem 0;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+// BUTTON STYLING
+
+button, .button {
+	border: none;
+	outline: none;
+	background: $green;
+	padding: 1rem 3.5rem;
+	border-radius: 0.1rem;
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+
+.button {
+	color: white;
+	margin: 2rem 0;
+}
+
+a {
+	color: $green;
+	text-decoration: none;
+	&:hover {
+		color: $dark_gray;
+	}
+}
+
+// HEADER STYLING
+
+header {
+	background: #529ECC;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 1.75rem 0;
+	border-bottom: 1.5px solid #376490;
+	.header_inner {
+		width: 90%;
+		margin: 0 auto;
+		#logo {
+			display: inline-block;
+			width: 10rem;
+			float: left;
+			font-weight: bold;
+			color: white;
+			font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+			font-size: 2.0rem;
+		}
+		nav {
+			float: right;
+			a {
+				text-decoration: none;
+				color: white;
+				font-size: 1.1rem;
+				line-height: 1.5;
+				margin-left: 1rem;
+				&:hover {
+					color: $light_gray;
+				}
+			}
+		}
+	}
+}
+
+// FOOTER STYLING (OPTIONAL)
+
+footer {
+	background: #529ECC;
+	width: 100%;
+	padding: 2rem 0;
+	color: white;
+	text-align: center;
+	@include bold_font;
+	p {
+		margin: 0;
+		font-size: .65rem;
+	}
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	margin-bottom: 1rem;
+	border: 1px solid $light_gray;
+	border-radius: .4rem;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	height: 40px;
+}
+
+textarea {
+	min-height: 200px;
+}

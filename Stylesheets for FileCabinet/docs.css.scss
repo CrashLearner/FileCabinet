@@ -1,0 +1,72 @@
+   // DOCS INDEX
+
+   #docs {
+	.doc {
+		background: #78594B;
+		width: 90%;
+		min-height: 100px;
+		margin: 1rem 1%;
+		padding: 1.5rem 2.5%;
+		float: left;
+		border-radius: 2.9rem;
+		position: relative;
+		text-align: center;
+		.title {
+			@include bold_font;
+			color: white;
+			margin: 0;
+			left: 4.5%;
+			font-size: 2.0em;
+			letter-spacing: 1px;
+		}
+		.date {
+			position: absolute;
+			bottom: .25rem;
+			left: 5.5%;
+			color: white;
+			font-weight: lighter;
+			font-size: .75rem;
+			text-align: center;
+		}
+		.content {
+			position: absolute;
+			bottom: .25rem;
+			left: 27.5%;
+			color: $light_gray;
+			font-weight: bold;
+			font-size: .75rem;
+			text-align: left;
+		}	
+	}
+}
+
+// DOCS SHOW
+
+#doc_show {
+	.title {
+		@include bold_font;
+		color: #78594B;
+		font-size: 2.0rem;
+		margin-bottom: 1.25rem;
+		padding-bottom: 1rem;
+		border-bottom: 1.0px solid rgba(82,158,204, 0.2);
+		text-align: center;
+	}
+	p {
+		font-size: 1.0rem;
+		line-height: 1.75;
+	}
+	.buttons {
+		margin-top: 3rem;
+		text-align: center;
+		a.button {
+			padding: .2rem 1.5rem;
+			border-radius: 0.1rem;
+			text-decoration: none;
+			color: #529ECC;
+			border: 5px solid #529ECC;
+			@include bold_font;
+			background: transparent;
+		}
+	}
+}
