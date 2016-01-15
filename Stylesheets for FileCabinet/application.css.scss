@@ -1,0 +1,264 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'normalize';
+
+html, body {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#sidebar {
+	width: 200px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: #88D0AD;
+	padding: 7em 0 0 0;
+	border-right: 1px solid #b8e2fe;
+
+	ul {
+		list-style: none;
+		text-align: right;
+		padding-right: 3em;
+		.category {
+			font-weight: 900;
+			font-size: 2.5em;
+			text-transform: uppercase;
+			color: #22747b;
+		}
+		li {
+			padding: .45em 0;
+			a {
+				color: #FFF;
+				text-decoration: none;
+				transition: all .4s ease;
+				&:hover {
+					color: #3d4d56;
+				}
+			}
+		}
+		.active {
+			a {
+				color: #33acb7;
+			}
+		}
+	}
+	.sign_in {
+		position: absolute;
+		right: 3.1em;
+		top: 39%;
+		font-size: 1.0em;
+		color: #FFFFFF;
+	}
+}
+
+.button {
+	outline: none;
+	background: transparent;
+	border: 1.5px solid #FFF;
+	padding: .5em 2.5em;
+	border-radius: 0.5em;
+	&:hover {
+		border: 1px solid #333734;
+		color: #22487b;
+		a {
+			color: #22487b !important;
+		}
+	}
+}
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#main_content {
+	margin-left: 200px;
+	#header {
+		padding: 1.2em 3.5em;
+		border-bottom: 1px solid #b8e2fe;
+		background: #529FCD;
+		color: #FFF;
+		p {
+			display: inline;
+		}
+		a {
+			color: #FFF;
+			text-decoration: none;
+		}
+		.buttons {
+			float: right;
+			margin-top: -6px;
+			.button {
+				font-size: .8em;
+				margin-left: .5em;
+			}
+		}
+	}
+	.post_wrapper {
+		padding: 1.9em;
+		border-bottom: 1px solid #d6dce0;
+		.title {
+			margin: 2px;
+			a {
+				font-weight: 500;
+				text-decoration: none;
+				color: #529FCD;
+				font-size: 1.2em;
+				&:hover {
+					color: #22487b;
+				}
+			}
+		}
+		.date_and_author {
+			color: #22487b;
+			margin: .5em 0 0 0;
+		}
+		.body {
+			color: #d3d3d3;
+			margin: .5em 0 0 0;
+		}
+	}
+	#post_content {
+		padding: 1em 3em;
+		.title {
+			font-weight: 500;
+			text-decoration: none;
+			color: #529FCD;
+			font-size: 2.5em;
+			margin-bottom: 0;
+		}
+		.body {
+			font-size: 1.1em;
+			line-height: 1.75;
+		}
+		.date_and_author {
+			color: #9eafba;
+			margin: .5em 0 2em 0;
+		}
+		#comments {
+			h2 {
+				margin: 3em 0 1em 0;
+				border-bottom: 1px solid #d6dce0;
+				padding-bottom: 0.5em;
+			}
+			h3 {
+				margin-top: 2em;
+			}
+			.comment {
+				border-bottom: 1px solid #d6dce0;
+				padding: 1.5em 2em;
+				.clear_both {
+					clear: both;
+				}
+				&:after {
+					clear: both;
+				}
+				.comment_content {
+					float: left;
+					.comment_name {
+						margin: 1em 0 0 0;
+						font-size: 1.0em;
+						text-transform: uppercase;
+					}
+					.comment_body {
+						font-size: 1.2em;
+						margin: 0.2em 0 0 0;
+					}
+					.comment_time {
+						margin-top: 1.2em;
+						font-size: .8em;
+					}
+				}
+				.button {
+					float: right;
+				}
+			}
+			input[type="text"], textarea {
+				width: 50%;
+			}
+		}
+	}
+	#page_wrapper {
+		padding: 3em;
+		#profile_image {
+			width: 300px;
+			float: left;
+			margin-right: 2em;
+			img {
+				width: 100%;
+				border-radius: 0.35em;
+			}
+		}
+		#content {
+			h1 {
+				font-weight: 500;
+			}
+			p {
+				font-size: 1.1em;
+				line-height: 1.75;
+			}
+			a {
+				color: #33acb7;
+				font-weight: 700;
+				text-decoration: none;
+			}
+		}
+	}
+	.links {
+		margin: 2em 0;
+	}
+	input[type="text"], input[type="email"], input[type="password"], textarea {
+		width: 70%;
+		border: 1px solid #d6dce0;
+		border-radius: .35em;
+		margin-top: 20px;
+		padding: .5em 1em;
+		line-height: 1.75;
+	}
+	input[type="text"] {
+		height: 35px;
+	}
+	textarea {
+		min-height: 180px;
+	}
+	input[type="submit"] {
+		outline: none;
+		background: transparent;
+		border: 1px solid #d6dce0;
+		padding: .5em 1.5em;
+		font-size: 1.1em;
+		border-radius: 1.5em;
+		margin-left: .5em;
+		&:hover {
+			border: 1px solid #33acb7;
+			color: #33acb7;
+		}
+	}
+}
