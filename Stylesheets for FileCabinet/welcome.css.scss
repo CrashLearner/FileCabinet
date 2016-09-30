@@ -44,7 +44,7 @@
 }
 
 #callouts {
-	background-image: url(image_path("callout_background.jpg"));
+	background-image: image-url("callout_background.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
